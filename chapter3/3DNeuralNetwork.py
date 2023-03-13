@@ -17,3 +17,12 @@ A1 = np.dot(x,W1)+B1
 Z1 = sigmoid(A1) #A에 대해 활성화함수로 변환된 신호를 Z로 표시
 
 # 1층 -> 2층
+W2 = ([[0.1,0.4],[0.2,0.5],[0.3,0.6]])
+B2 = np.array([0.1,0.2])
+
+print(Z1.shape)
+print(W2.shape)
+print(B2.shape)
+
+A2 = np.dot(Z1,W2)+B2 #1층의 Z1이 입력이 된다
+Z2 = sigmoid(A2)
