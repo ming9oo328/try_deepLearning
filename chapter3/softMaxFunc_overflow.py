@@ -6,4 +6,10 @@ print(np.exp(a) / np.sum(np.exp(a))) #오버플로우 발생
 c = np.max(a)
 print(np.exp(a-c)/np.sum(np.exp(a-c)))
 
-
+def softmax(a):
+    c = np.max(a)
+    exp_a = np.exp(a-c)
+    sum_exp_a = np.sum(exp_a)
+    y = exp_a / sum_exp_a
+    
+    return y
